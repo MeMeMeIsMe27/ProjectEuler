@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="/Users/ben/Cool%20stuff/Javascript/js/Functions.js"></script>
+	<script type="text/javascript">
+	var primes = [2,3,5,7];
+	var number = 7;
+	var prime;
+	var i;
+	function calculate(amount){
+		for (var i2 = 0; i2 < amount; i2++){
+			prime = true;
+			number+=4;
+			for(i = 2; Math.pow(primes[i],2) < number+1; i++){
+				if(number%primes[i]==0){
+					prime = false;
+					break
+				}
+			}
+			if(prime == true){
+				primes.push(number);
+			}
+			number+=2;
+			prime = true;
+			for(i = 2; Math.pow(primes[i],2) < number+1; i++){
+				if(number%primes[i]==0){
+					prime = false;
+					break
+				}
+			}
+			if(prime == true){
+				primes.push(number);
+			}
+		}
+	}
+	calculate(100000)
+	var maxValue = 0
+	var maxSet = [0,0]
+	for(var a = -1000; a<1000;a++){
+		for(var b = -1000; b < 1000;b++){
+			for(i = 0;primes.indexOf(i*i+i*a+b)!=-1;i++){}
+			if(i>maxValue){
+				maxSet=[a,b];
+				maxValue=i;
+			}
+		}
+console.log(a)
+	}
+	</script>
+
+</body>
+</html>

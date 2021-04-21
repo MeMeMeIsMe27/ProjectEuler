@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="/Users/ben/Cool%20stuff/Javascript/js/Functions.js"></script>
+	<script type="text/javascript">
+	var working = [];
+	for(var mid = 1; mid<10;mid++){
+		for(var i = 0; i<100;i++){
+			if(Number((i%10)+""+mid)/Number(mid+""+Math.floor(i/10))==i%10/Math.floor(i/10)){
+				if(Number((i%10)+""+mid)/Number(mid+""+Math.floor(i/10))<1){
+					working.push(((i%10)+""+mid+"/"+mid)+Math.floor(i/10));
+				}
+			}
+		}
+	}
+
+	</script>
+
+</body>
+</html>

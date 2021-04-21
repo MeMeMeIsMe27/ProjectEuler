@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="/Users/ben/Cool%20stuff/Javascript/js/Functions.js"></script>
+	<script type="text/javascript">
+
+	Number.prototype.powerOf = function(num){
+		var total = BigInt(1)
+		var multVal = BigInt(this)
+		for(var i = 0; i<num; i++){
+			total*=multVal
+		}
+		return(total)
+	}
+	function powerOf(base,num){
+		var total = BigInt(1)
+		var multVal = BigInt(base)
+		for(var i = 0; i<num; i++){
+			total*=multVal
+		}
+		return(total)
+	}
+
+	}
+	function digitSum(num){
+		var total = 0;
+		var numString = num.toString();
+		for(var i = 0; i < numString.length; i++){
+			total+=Number(numString[i])
+		}
+		return(total)
+	}
+	maxNum = 0;
+	for(var i = 0; i < 100; i++){
+		for(var i2 = 0; i2 < 100; i2++){
+			maxNum=Math.max(digitSum(i.powerOf(i2)),maxNum)
+		}
+	}
+	console.log(maxNum)
+
+	</script>
+</body>
+</html>

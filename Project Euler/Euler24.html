@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="/Users/ben/Cool%20stuff/Javascript/js/Functions.js"></script>
+	<script type="text/javascript">
+	permutations = [];
+	function fill(unusedNums,usedNums){
+		if(unusedNums.length==1){
+			permutations.push(usedNums+unusedNums[0])
+		} else {
+			for(var i = 0; i < unusedNums.length; i++){
+				a = copy(unusedNums)
+				b = a.splice(i,1)
+				fill(a,usedNums+b[0])
+			}
+		}
+	}
+	fill(["0","1","2","3","4","5","6","7","8","9"],"")
+	console.log(permutations)
+
+	</script>
+
+</body>
+</html>

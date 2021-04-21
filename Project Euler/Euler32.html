@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="/Users/ben/Cool%20stuff/Javascript/js/Functions.js"></script>
+	<script type="text/javascript">
+	permutations = [];
+	workingNumbers = [];
+	var a
+	var b
+	function fill(unusedNums,usedNums){
+	if(unusedNums.length==1){
+	permutations.push(usedNums+unusedNums[0])
+	} else {
+		for(var i = 0; i < unusedNums.length; i++){
+			var a = copy(unusedNums)
+			var b = a.splice(i,1)
+			fill(a,usedNums+b[0])
+		}
+	}
+	}
+	fill(["1","2","3","4","5","6","7","8","9"],"")
+for(var i = 0; i < permutations.length;i++){
+a=permutations[i]
+b=Number(a[5]+a[6]+a[7]+a[8])
+if(Number(a[0])*Number(a[1]+a[2]+a[3]+a[4])==b||Number(a[0]+a[1])*Number(a[2]+a[3]+a[4])==b||Number(a[0]+a[1]+a[2])*Number(a[3]+a[4])==b||Number(a[0]+a[1]+a[2]+a[3])*Number(a[4])==b){
+workingNumbers.push(b)
+}
+}
+workingNumbers = noRepateEntrys(workingNumbers)
+console.log(workingNumbers)
+	</script>
+
+</body>
+</html>

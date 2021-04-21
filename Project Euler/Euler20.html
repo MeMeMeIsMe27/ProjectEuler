@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="/Users/ben/Cool%20stuff/Javascript/js/Functions.js"></script>
+	<script type="text/javascript">
+var num = BigInt(1);
+var newNum = ""
+var i2;
+for(var i=1;i<100;i++){
+i2=i;
+while(i2%10==0){
+i2=i2/10;
+}
+num*=BigInt(i2)
+while(num%BigInt(10)==BigInt(0)){
+num=num/BigInt(10);
+}
+}
+newNum=num+"";
+num = 0;
+for(i = 0; i < newNum.length;i++){
+num+=Number(newNum[i]);
+}
+	</script>
+
+</body>
+</html>

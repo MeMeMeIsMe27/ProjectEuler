@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser - Making your first game, part 9</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+	var i;
+	var answer;
+	var answer1 = 0;
+	var answer2 = 0;
+	var countingNumber = 0;
+	var mainGame = {create: create}
+	function create (){
+		for(i = 0; i < 100; i++){
+			countingNumber++;
+			answer1 = answer1 + countingNumber;
+			if(i == 99){
+				answer1 = answer1 * answer1;
+			}
+		}
+		countingNumber = 0;
+		for(i = 0; i < 100; i++){
+			countingNumber++
+			answer2 += countingNumber * countingNumber;
+			if(i == 99){
+				answer = answer1 - answer2;
+				console.log(answer);
+			}
+		}
+	}
+	</script>
+
+</body>
+</html>

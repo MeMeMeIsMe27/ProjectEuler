@@ -1,0 +1,46 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="/Users/ben/Cool%20stuff/Javascript/js/Functions.js"></script>
+	<script type="text/javascript">
+	function d(x){
+		var answer = 0;
+		for(var i=1;i<=x/2;i++){
+			if(x%i==0){
+				answer+=i;
+			}
+		}
+	return(answer)
+	}
+	var abundentNumbers = [];
+	for(var i = 1; i < 28123; i++){
+if(d(i)>i){
+	abundentNumbers.push(i);
+}
+	}
+var nums = [];
+for(i = 0; i < 28123; i++){
+nums.push(false)
+}
+for(i = 0; i < abundentNumbers.length; i++){
+	for(var i2 = 0; i2 < abundentNumbers.length; i2++){
+nums[abundentNumbers[i2]+abundentNumbers[i]]=true;
+	}
+}
+var answer = 0;
+for(var i = 0; i < 28123; i++){
+if(nums[i]==false){
+answer+=i;
+}
+}
+
+	</script>
+
+</body>
+</html>

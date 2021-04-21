@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="/Users/ben/Cool%20stuff/Javascript/js/Functions.js"></script>
+	<script type="text/javascript">
+	var values = [];
+	var total;
+for(var i = 2; i < 10000000;i++){
+	total = 0;
+for(var i2 = 0; i2<(i+"").length;i2++){
+total+=Math.pow(((i+"")[i2]),5)
+}
+if(total==i){
+	values.push(i);
+}
+}
+	</script>
+
+</body>
+</html>

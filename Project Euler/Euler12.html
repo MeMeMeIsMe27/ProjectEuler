@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser - Making your first game, part 9</title>
+	<script type="text/javascript" src="js/phaser.min.js"></script>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+	var number = 1;
+	var countingNumber;
+	var triangleNumber = 0;
+	for (var factorAmount = 2; factorAmount < 500; number++){
+		factorAmount = 2
+		triangleNumber = 0;
+		for (countingNumber = number; countingNumber != 0; countingNumber--){
+			triangleNumber += countingNumber;
+		}
+		for (countingNumber = 2;triangleNumber/countingNumber > countingNumber;countingNumber++){
+			if (triangleNumber/countingNumber == Math.round(triangleNumber/countingNumber) ){
+				if (triangleNumber/countingNumber == countingNumber){
+					factorAmount++;
+				} else {
+					factorAmount +=2;
+				}
+			}
+		}
+	}
+	console.log(triangleNumber)
+	</script>
+
+</body>
+</html>

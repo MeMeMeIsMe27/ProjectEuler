@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser - Making your first game, part 9</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+	var BigStartingNumber = 0;
+	var BigSteps = 0;
+	var steps = []
+	var currentNumber;
+	for (var startingNumber = 2;startingNumber < 1000001; startingNumber++ ){
+		steps = []
+	for (currentNumber = startingNumber;currentNumber != 1;){
+		steps.push(currentNumber);
+		if (currentNumber / 2 == Math.round(currentNumber / 2)){
+			currentNumber = currentNumber / 2;
+		} else {
+			currentNumber = currentNumber*3;
+			currentNumber++;
+		}
+	}
+	steps.push(currentNumber);
+	if (Math.max(steps.length,BigSteps) == steps.length){
+		BigSteps = steps.length;
+		BigStartingNumber = startingNumber;
+	}
+}
+	console.log(BigStartingNumber + ": " + BigSteps);
+	</script>
+
+	</body>
+	</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser - Making your first game, part 9</title>
+	<script type="text/javascript" src="js/phaser.min.js"></script>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+	var hight = prompt("what is the hight?");
+	var length = prompt("what is the lenght?");
+	var lastRow = []
+	for (var p = -1;length > p; p++){
+		lastRow.push(1);
+	}
+	var allrows = [];
+	allrows = allrows.concat([lastRow]);
+	var currentRow = [];
+	var total = 0;
+	for(b = 0; hight>b; b++){
+		currentRow.push(lastRow[0])
+		total = 0;
+		total += lastRow[0];
+		for (var i = 1; i < length - -1; i++){
+			currentRow.push(total + lastRow[i])
+			total += lastRow[i];
+		}
+		allrows = allrows.concat([currentRow]);
+		lastRow = currentRow;
+		currentRow = [];
+	}
+	console.log(allrows)
+	</script>
+
+</body>
+</html>

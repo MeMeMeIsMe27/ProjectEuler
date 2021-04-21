@@ -1,0 +1,53 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="/Users/ben/Cool%20stuff/Javascript/js/Functions.js"></script>
+	<script type="text/javascript">
+	function flipAdd(num){
+		var stringNum = num.toString();
+		var num2 = ""
+		for(var i = stringNum.length-1; i >= 0; i--){
+			num2+=stringNum[i]
+		}
+		num2=BigInt(num2)
+		return(num+num2)
+	}
+	function isPalindrome(num){
+		var stringNum = num.toString();
+		palindrome = true;
+		for(var i = 0; i<Math.floor(stringNum.length/2); i++){
+			if(stringNum[i]!=stringNum[stringNum.length-i-1]){
+				palindrome = false
+				break;
+			}
+		}
+		return(palindrome)
+	}
+	var workingNums = 0;
+	var	lychel
+	var num
+	for(var i = 0; i < 10000; i++){
+		lychel = true;
+		num = BigInt(i)
+		for(var i2 = 0; i2<50; i2++){
+			num=flipAdd(num)
+			if(isPalindrome(num)){
+				lychel=false;
+				break;
+			}
+		}
+		if(lychel){
+			workingNums++;
+		}
+	}
+	console.log(workingNums)
+	</script>
+
+</body>
+</html>
